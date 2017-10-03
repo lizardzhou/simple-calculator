@@ -45,8 +45,8 @@ public class SimpleCalculator {
 		
 		calcButton.addActionListener(new calcListener());
 		resetButton.addActionListener(new resetListener());
-		numText1.addKeyListener(new enterListener());
-		numText2.addKeyListener(new enterListener());
+		numText1.addKeyListener(new otherKeyListener());
+		numText2.addKeyListener(new otherKeyListener());
 		
 		frame.setSize(400, 200);
 		frame.setVisible(true);	//PUT THE WINDOW VISIBILITY AT LAST PLACE!!!
@@ -86,7 +86,7 @@ public class SimpleCalculator {
 		}		
 	}
 	
-	class enterListener implements KeyListener {
+	class otherKeyListener implements KeyListener {
 		public void keyTyped(KeyEvent e) {}
 
 		public void keyPressed(KeyEvent e) {
